@@ -1,4 +1,4 @@
-const SLICE_COUNT = 12;  // Set the slice count to 10
+const SLICE_COUNT = 13;  // Set the slice count to 10
 
 // Function to initialize pScope
 function setup_pScope(pScope){
@@ -54,7 +54,7 @@ function setup_layers(pScope){
   var layer8 = new PLayer(cloud);
   layer8.mode(RING);
   layer8.set_boundary( 100, 1050 );
-  
+
 }
 
 // Function to draw stars
@@ -69,6 +69,12 @@ function stars(x, y, animation, pScope) {
   // Draw multiple stars at specified coordinates
   drawStar(10, -900, 7, 255);
   drawStar(13, -850, 5, 255);
+  drawStar(13, -920, 3, 300);
+  drawStar(64, -900, 5, 320);
+  drawStar(128, -830, 6, 300);
+  drawStar(-20, -830, 6, 300);
+  drawStar(-64, -800, 7, 350);
+  drawStar(-128, -850, 8, 400);
 }
 
 // Function to draw the text layer
@@ -115,7 +121,7 @@ function squares(x, y, animation, pScope){
 
 function earth(x, y, animation, pScope){
 // Set background slice angle
-scale(2.5);
+scale(0.27);
 pScope.draw_image("earth",x,y);
 
 }
@@ -146,7 +152,7 @@ function sky2(x, y, animation, pScope){
     let backgroundArcEnd = 270 + angleOffset;
   
     
-    fill(5,55,153); // Set background color
+    fill(0,90,220); // Set background color
     arc(x,y,1100,1100,backgroundArcStart,backgroundArcEnd); // Draw background slice
     }
 
